@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação das Quatro Revoluções Industriais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 90%;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border-left: 5px solid #007BFF;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #007BFF;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .info {
+            display: none;
+            margin-top: 10px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comparação das Quatro Revoluções Industriais</h1>
+        <div class="section" onclick="toggleInfo('info1')">
+            <h2>Revolução Industrial 1</h2>
+            <div id="info1" class="info">
+                <p><strong>Período:</strong> 1760 - 1840</p>
+                <p><strong>Inovações:</strong> Máquina a vapor (James Watt), fiação mecânica, tear mecânico.</p>
+                <p><strong>Características:</strong> Transição para a mecanização; surgimento das fábricas; transporte ferroviário.</p>
+                <p><strong>Impactos:</strong></p>
+                <ul>
+                    <li><strong>Positivos:</strong> Aumento da produção; urbanização; desenvolvimento de novas tecnologias; crescimento econômico.</li>
+                    <li><strong>Negativos:</strong> Condições de trabalho precárias; poluição; exploração da mão de obra; surgimento de favelas.</li>
+                </ul>
+                <p><strong>Desigualdade Social:</strong> O crescimento econômico beneficiou uma pequena elite, enquanto muitos trabalhadores enfrentavam salários baixos e condições precárias.</p>
+                <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2023/03/teares-primeira-revolucao-industrial.jpg" alt="Teares da Primeira Revolução Industrial">
+            </div>
+        </div>
+        <div class="section" onclick="toggleInfo('info2')">
+            <h2>Revolução Industrial 2</h2>
+            <div id="info2" class="info">
+                <p><strong>Período:</strong> 1840 - 1940</p>
+                <p><strong>Inovações:</strong> Eletricidade (Thomas Edison), linha de montagem (Henry Ford), aço (processo Bessemer).</p>
+                <p><strong>Características:</strong> Produção em massa; aumento da eficiência; transporte (trem e navio a vapor).</p>
+                <p><strong>Impactos:</strong></p>
+                <ul>
+                    <li><strong>Positivos:</strong> Crescimento econômico significativo; aumento do consumo; melhoria na qualidade de vida; maior acesso a produtos.</li>
+                    <li><strong>Negativos:</strong> Desigualdade social; exploração do trabalhador; condições insalubres nas fábricas; poluição ambiental.</li>
+                </ul>
+                <p><strong>Desigualdade Social:</strong> A concentração de riqueza e a falta de acesso à educação contribuíram para um aumento significativo da desigualdade social.</p>
+                <img src="https://inforsociedade.wordpress.com/wp-content/uploads/2013/11/2.jpg" alt="Linha de Montagem da Segunda Revolução Industrial">
+            </div>
+        </div>
+        <div class="section" onclick="toggleInfo('info3')">
+            <h2>Revolução Industrial 3</h2>
+            <div id="info3" class="info">
+                <p><strong>Período:</strong> 1960 - 2000</p>
+                <p><strong>Inovações:</strong> Computadores, automação industrial, robótica, internet.</p>
+                <p><strong>Características:</strong> Digitalização da produção; integração de sistemas.</p>
+                <p><strong>Impactos:</strong></p>
+                <ul>
+                    <li><strong>Positivos:</strong> Aumento da eficiência; globalização; acesso à informação; novas oportunidades de trabalho em tecnologia.</li>
+                    <li><strong>Negativos:</strong> Desemprego em setores tradicionais; dependência tecnológica; aumento da desigualdade digital; problemas de privacidade.</li>
+                </ul>
+                <img src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/1-terceira-revolucao-industrial-.jpg" alt="Robôs na Terceira Revolução Industrial">
+            </div>
+        </div>
+        <div class="section" onclick="toggleInfo('info4')">
+            <h2>Revolução Industrial 4</h2>
+            <div id="info4" class="info">
+                <p><strong>Período:</strong> 2000 - presente</p>
+                <p><strong>Inovações:</strong> Inteligência artificial, Internet das Coisas (IoT), blockchain, big data.</p>
+                <p><strong>Características:</strong> Convergência de tecnologias; automação avançada.</p>
+                <p><strong>Impactos:</strong></p>
+                <ul>
+                    <li><strong>Positivos:</strong> Transformação digital em todos os setores; novas formas de trabalho; melhorias na eficiência; inovações em saúde e educação.</li>
+                    <li><strong>Negativos:</strong> Desemprego e substituição de empregos por máquinas; questões éticas em IA; riscos de segurança cibernética; exclusão de setores menos adaptados.</li>
+                </ul>
+                <img src="https://www.ltiengenharia.com.br/wp-content/uploads/2023/07/2023_07_08_01_CAPA.png" alt="Inteligência Artificial na Quarta Revolução Industrial">
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleInfo(id) {
+            const info = document.getElementById(id);
+            info.style.display = info.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
